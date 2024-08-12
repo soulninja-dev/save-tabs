@@ -58,3 +58,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 chrome.action.onClicked.addListener(function(tab) {
   chrome.tabs.create({url: 'tablist.html'});
 });
+
+chrome.commands.onCommand.addListener((command) => {
+  if (command === "open-extension") {
+    chrome.action.openPopup();
+  }
+});
