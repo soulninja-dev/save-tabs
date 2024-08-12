@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saved Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #tagList {
+      margin-bottom: 10px;
+    }
+    .tag {
+      display: inline-block;
+      margin-right: 5px;
+      padding: 2px 5px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    #tabList {
+      list-style-type: none;
+      padding: 0;
+    }
+    #tabList li {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      position: relative;
+    }
+    .tags, .date {
+      font-size: 0.8em;
+      color: #666;
+    }
+    .archive-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #f0f0f0;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    #view-archived {
+      margin-top: 20px;
+    }
+    #settings-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    #settings-panel {
+      display: none;
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    #settings-panel button {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Saved Tabs</h1>
+  <div id="tagList"></div>
+  <ul id="tabList"></ul>
+  <div id="view-archived">
+    <a href="archived.html">View Archived Tabs</a>
+  </div>
+  
+  <div id="settings-icon">settings</div>
+  <div id="settings-panel">
+    <button id="exportButton">Export Tabs</button>
+    <button id="importButton">Import Tabs</button>
+    <input type="file" id="importFile" style="display: none;">
+  </div>
+
+  <script src="tablist.js"></script>
+</body>
+</html>

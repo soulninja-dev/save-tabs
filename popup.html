@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Saver</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    input, button {
+      margin: 5px 0;
+      width: 100%;
+    }
+    #existingTags {
+      margin-top: 10px;
+    }
+    .tag {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 2px 5px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Save Current Tab</h2>
+  <input type="text" id="tagInput" placeholder="Enter tags (comma-separated)">
+  <button id="saveButton">Save Tab</button>
+  <div id="existingTags">
+    <h3>Existing Tags:</h3>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
